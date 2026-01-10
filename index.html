@@ -64,17 +64,6 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <style>
-    .hero .publication-authors,
-    .hero .publication-authors a,
-    .hero .eql-cntrb {
-      color: white;
-    }
-    .hero .publication-authors a:hover {
-      color: #ddd; /* Optional: for hover effect */
-    }
-  </style>
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -224,7 +213,7 @@
     </div>
   </div>
   <main id="main-content">
-  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/images/robo_work_photo.png'); background-size: cover; background-position: center;">
+  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('static/images/robo_work_photo.png'); background-size: cover; background-position: center;">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
@@ -397,13 +386,25 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- NEW Overview Section -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Overview of DemoAgent</h2>
+        <div class="columns is-centered">
+            <div class="column is-full has-text-centered">
+                <img src="static/images/overview.jpg" alt="Overview of DemoAgent" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END Overview Section -->
+
 <!-- NEW Method Section -->
 <section class="section">
     <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Method</h2>
+        <h2 class="title is-3 has-text-centered">Method of DemoAgent</h2>
         <div class="columns is-centered">
             <div class="column is-full has-text-centered">
-                <img src="static/images/overview.jpg" alt="Method overview" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
                 <img src="static/images/loop.png" alt="Method loop diagram" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
                 <img src="static/images/framework.png" alt="Method framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
                 <img src="static/images/agent_framework.png" alt="Agent framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
