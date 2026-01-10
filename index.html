@@ -64,6 +64,18 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+
+  <style>
+    .hero .publication-title,
+    .hero .publication-authors,
+    .hero .publication-authors a,
+    .hero .eql-cntrb {
+      color: white;
+    }
+    .hero .publication-authors a:hover {
+      color: #ddd; /* Optional: for hover effect */
+    }
+  </style>
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -295,38 +307,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Learning robust policies for long-horizon dexterous manipulation remains a grand challenge. While recent robot foundation models have demonstrated impressive capabilities, they often suffer from brittleness: a single sub-task failure typically leads to the termination of the entire episode. To achieve true robustness, agents must not only mimic expert successes but also learn to recover from inevitable execution errors. However, acquiring such ”recovery data” is notoriously inefficient due to passive collection paradigms and the bottleneck of manual resetting. In this paper, we propose an Agent-in-the-Loop Self-Correcting Data Engine, a unified framework designed to automate the acquisition of high-value recovery behaviors. We introduce two core mechanisms: (1) an automated self-repair and reset loop that allows the robot to autonomously attempt recovery or reset the environment, capturing critical failure-correction transitions without human intervention; and (2) an active intention analyzer that monitors performance distributions to identify failure clusters, querying human operators solely for information-dense edge cases. By dynamically arbitrating between autonomous recovery, automated reset, and human takeover, our framework minimizes human effort while maximizing data utility. Experiments on complex multi-stage tasks demonstrate that our system significantly improves data collection efficiency and yields policies with superior robustness against disturbances compared to state-of-the-art baselines.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- NEW Method Section -->
-<section class="section">
-    <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Method</h2>
-        <div class="columns is-centered">
-            <div class="column is-full has-text-centered">
-                <img src="static/images/overview.jpg" alt="Method overview" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
-                <img src="static/images/loop.png" alt="Method loop diagram" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
-                <img src="static/images/framework.png" alt="Method framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
-                <img src="static/images/agent_framework.png" alt="Agent framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END Method Section -->
 
 <!-- Labeled Video Gallery Section -->
 <section class="section">
@@ -400,6 +380,39 @@
   </div>
 </section>
 <!-- END Labeled Video Gallery Section -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning robust policies for long-horizon dexterous manipulation remains a grand challenge. While recent robot foundation models have demonstrated impressive capabilities, they often suffer from brittleness: a single sub-task failure typically leads to the termination of the entire episode. To achieve true robustness, agents must not only mimic expert successes but also learn to recover from inevitable execution errors. However, acquiring such ”recovery data” is notoriously inefficient due to passive collection paradigms and the bottleneck of manual resetting. In this paper, we propose an Agent-in-the-Loop Self-Correcting Data Engine, a unified framework designed to automate the acquisition of high-value recovery behaviors. We introduce two core mechanisms: (1) an automated self-repair and reset loop that allows the robot to autonomously attempt recovery or reset the environment, capturing critical failure-correction transitions without human intervention; and (2) an active intention analyzer that monitors performance distributions to identify failure clusters, querying human operators solely for information-dense edge cases. By dynamically arbitrating between autonomous recovery, automated reset, and human takeover, our framework minimizes human effort while maximizing data utility. Experiments on complex multi-stage tasks demonstrate that our system significantly improves data collection efficiency and yields policies with superior robustness against disturbances compared to state-of-the-art baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- NEW Method Section -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="columns is-centered">
+            <div class="column is-full has-text-centered">
+                <img src="static/images/overview.jpg" alt="Method overview" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
+                <img src="static/images/loop.png" alt="Method loop diagram" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
+                <img src="static/images/framework.png" alt="Method framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
+                <img src="static/images/agent_framework.png" alt="Agent framework" style="width: 80%; border-radius: 10px; margin-bottom: 2rem;">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END Method Section -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
