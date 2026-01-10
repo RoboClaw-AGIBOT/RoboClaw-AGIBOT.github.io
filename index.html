@@ -64,6 +64,18 @@
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+
+  <style>
+    .hero .publication-title,
+    .hero .publication-authors,
+    .hero .publication-authors a,
+    .hero .eql-cntrb {
+      color: white;
+    }
+    .hero .publication-authors a:hover {
+      color: #ddd; /* Optional: for hover effect */
+    }
+  </style>
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -213,12 +225,12 @@
     </div>
   </div>
   <main id="main-content">
-  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('static/images/robo_work_photo.png'); background-size: cover; background-position: center;">
+  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('static/images/robo_photo.png'); background-size: cover; background-position: center;">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="color: white;">DemoAgent：Agent-in-the-Loop Data Curation from Online Experience for Long-Horizon Manipulation</h1>
+            <h1 class="title is-1 publication-title">DemoAgent：Agent-in-the-Loop Data Curation from Online Experience for Long-Horizon Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
