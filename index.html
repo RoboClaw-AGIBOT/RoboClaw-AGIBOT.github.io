@@ -299,59 +299,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Before/After DemoAgent Fine-tuning</h2>
-        <div class="columns is-centered">
-
-          <div class="column is-half">
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task1 (before DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/task1.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task2 (before DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/task2.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task3 (before DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/task3.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task4 (before DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/task4.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="column is-half">
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task1 (after DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task2 (after DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task3 (after DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-
-            <h4 class="title is-5 has-text-centered" style="margin-bottom: 0.5rem;">task4 (after DemoAgent)</h4>
-            <video controls muted loop preload="metadata" style="width: 100%; border-radius: 10px; object-fit: cover; margin-bottom: 1.5rem;">
-              <source src="static/videos/banner_video.mp4" type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -359,7 +306,13 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Learning robust policies for long-horizon dexterous manipulation remains a grand challenge. While recent robot foundation models have demonstrated impressive capabilities, they often suffer from brittleness: a single sub-task failure typically leads to the termination of the entire episode. To achieve true robustness, agents must not only mimic expert successes but also learn to recover from inevitable execution errors. However, acquiring such recovery data is notoriously inefficient due to passive collection paradigms and the bottleneck of manual resetting. In this paper, we propose an Agent-in-the-Loop Self-Correcting Data Engine, a unified framework designed to automate the acquisition of high-value recovery behaviors. We introduce two core mechanisms: (1) an automated self-repair and reset loop that allows the robot to autonomously attempt recovery or reset the environment, capturing critical failure-correction transitions without human intervention; and (2) an active intention analyzer that monitors performance distributions to identify failure clusters, querying human operators solely for information-dense edge cases. By dynamically arbitrating between autonomous recovery, automated reset, and human takeover, our framework minimizes human effort while maximizing data utility. Experiments on complex multi-stage tasks demonstrate that our system significantly improves data collection efficiency and yields policies with superior robustness against disturbances compared to state-of-the-art baselines.
+                Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, skill learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-skill execution.
+              </p>
+              <p>
+                We present <strong>RoboClaw</strong>, an agentic robotics framework that unifies data collection, skill learning, and task execution under a single VLM-driven controller. At the skill level, RoboClaw introduces <strong>Entangled Action Pairs (EAP)</strong>, which couple forward manipulation behaviors with inverse recovery actions to form self-resetting loops for autonomous data collection. This mechanism enables continuous on-policy data acquisition and iterative skill refinement with minimal human intervention.
+              </p>
+              <p>
+                During deployment, the same agent performs high-level reasoning and dynamically orchestrates learned skill primitives to accomplish long-horizon tasks. By maintaining consistent contextual semantics across collection and execution, RoboClaw reduces mismatch between the two phases and improves multi-skill robustness. Experiments in real-world manipulation tasks demonstrate improved stability and scalability compared to conventional open-loop pipelines, while significantly reducing human effort throughout the robot lifecycle.
               </p>
             </div>
           </div>
