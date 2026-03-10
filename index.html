@@ -109,6 +109,21 @@
       text-align: center;
       color: #222;
     }
+
+    .dataset-row {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .dataset-row img {
+      width: 48%;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
   </style>
 
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -391,6 +406,16 @@
               Your browser does not support the video tag.
             </video>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">The dataset we collect</h2>
+        <div class="dataset-row">
+          <img src="static/屏幕截图 2026-03-10 113809.png" alt="Collected dataset visualization 1">
+          <img src="static/屏幕截图 2026-03-10 113834.png" alt="Collected dataset visualization 2">
         </div>
       </div>
     </section>
