@@ -95,6 +95,20 @@
       line-height: 1.7;
       color: #444;
     }
+
+    .demo-video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .demo-video-title {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      color: #222;
+    }
   </style>
 
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -317,6 +331,45 @@
                 During deployment, the same agent performs high-level reasoning and dynamically orchestrates learned skill primitives to accomplish long-horizon tasks. By maintaining consistent contextual semantics across collection and execution, RoboClaw reduces mismatch between the two phases and improves multi-skill robustness. Experiments in real-world manipulation tasks demonstrate improved stability and scalability compared to conventional open-loop pipelines, while significantly reducing human effort throughout the robot lifecycle.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What can we do?</h2>
+        <div class="columns is-multiline is-variable is-6">
+          <div class="column is-half">
+            <h3 class="demo-video-title">Automatic Data Collection</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="/1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">What if the automatic data collection <strong>fails</strong>?</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="/2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">Execute long-horizon tasks</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">What if we want to execute the task <strong>remotely</strong>?</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
