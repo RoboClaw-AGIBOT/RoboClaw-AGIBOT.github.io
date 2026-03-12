@@ -143,6 +143,14 @@
       font-weight: 600;
       color: #222;
     }
+
+    .performance-caption {
+      margin-top: 0.9rem;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #444;
+      text-align: justify;
+    }
   </style>
 
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -362,10 +370,16 @@
           <div class="performance-item">
             <div class="performance-title">relative human time table</div>
             <img src="static/images/屏幕截图 2026-03-10 165923.png" alt="relative human time table">
+            <p class="performance-caption">
+              Human effort comparison for data collection. (a) Relative human time required to collect the same amount of data. (b) Relative human intervention during rollout execution. All values are normalized with respect to our method (Ours = 1).
+            </p>
           </div>
           <div class="performance-item">
             <div class="performance-title">compared success rates table</div>
             <img src="static/images/微信图片_20260311114809.png" alt="compared success rates table">
+            <p class="performance-caption">
+              Success rate across iterations on the vanity table organization task. RoboClaw (Ours) significantly outperforms both end-to-end VLA baselines and the expected success rate computed as the product of four independent subtask success rates. The improvement comes from RoboClaw’s ability to monitor task progress and automatically invoke recovery policies when failures occur. Results are averaged over 20 trials.
+            </p>
           </div>
         </div>
       </div>
