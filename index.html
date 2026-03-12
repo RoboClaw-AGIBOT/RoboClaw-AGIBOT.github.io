@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks - AUTHOR_NAMES">
-  <meta name="description" content="An agentic robotics framework that unifies data collection, skill learning, and task execution for long-horizon robotic manipulation.">
+  <meta name="description" content="An agentic robotics framework that unifies data collection, policy learning, and task execution for long-horizon robotic manipulation.">
   <meta name="keywords" content="RoboClaw, robotics, VLA, VLM, long-horizon manipulation, embodied AI">
   <meta name="author" content="Ruiying Li, Yunlang Zhou, YuYao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang, Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, yangyang, Guanghui Ren, Maoqing Yao, Wenhao Wang, Yao Mu">
   <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="agibot">
   <meta property="og:title" content="RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks">
-  <meta property="og:description" content="An agentic robotics framework that unifies data collection, skill learning, and task execution for long-horizon robotic manipulation.">
+  <meta property="og:description" content="An agentic robotics framework that unifies data collection, policy learning, and task execution for long-horizon robotic manipulation.">
   <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
   <meta property="og:image" content="static/images/屏幕截图_2026-03-09_154609-removebg-preview.png">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <meta name="twitter:title" content="RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks">
-  <meta name="twitter:description" content="An agentic robotics framework that unifies data collection, skill learning, and task execution for long-horizon robotic manipulation.">
+  <meta name="twitter:description" content="An agentic robotics framework that unifies data collection, policy learning, and task execution for long-horizon robotic manipulation.">
   <meta name="twitter:image" content="static/images/屏幕截图_2026-03-09_154609-removebg-preview.png">
   <meta name="twitter:image:alt" content="RoboClaw Research Preview">
 
@@ -171,7 +171,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks",
-    "description": "An agentic robotics framework that unifies data collection, skill learning, and task execution for long-horizon robotic manipulation.",
+    "description": "An agentic robotics framework that unifies data collection, policy learning, and task execution for long-horizon robotic manipulation.",
     "author": [
       {
         "@type": "Person",
@@ -198,7 +198,7 @@
     "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
     "image": "static/images/屏幕截图_2026-03-09_154609-removebg-preview.png",
     "keywords": ["robotics", "VLM", "VLA", "long-horizon manipulation", "embodied AI"],
-    "abstract": "Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, skill learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-skill execution.",
+    "abstract": "Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, policy learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-policy execution.",
     "citation": "BIBTEX_CITATION_HERE",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -272,12 +272,12 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    <a href="https://roboclaw-agibot.github.io/" target="_blank"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
                       </span>
-                      <span>arXiv</span>
+                      <span>arXiv (coming soon)</span>
                     </a>
                   </span>
 
@@ -317,13 +317,13 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, skill learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-skill execution.
+                Vision-Language-Action (VLA) systems have shown strong potential for language-driven robotic manipulation. However, scaling them to long-horizon tasks remains challenging. Existing pipelines typically separate data collection, policy learning, and deployment, resulting in heavy reliance on manual environment resets and brittle multi-policy execution. We present <strong>RoboClaw</strong>, an agentic robotics framework that unifies data collection, policy learning, and task execution under a single VLM-driven controller.
               </p>
               <p>
-                We present <strong>RoboClaw</strong>, an agentic robotics framework that unifies data collection, skill learning, and task execution under a single VLM-driven controller. At the skill level, RoboClaw introduces <strong>Entangled Action Pairs (EAP)</strong>, which couple forward manipulation behaviors with inverse recovery actions to form self-resetting loops for autonomous data collection. This mechanism enables continuous on-policy data acquisition and iterative skill refinement with minimal human intervention.
+                At the policy level, RoboClaw introduces <strong>Entangled Action Pairs (EAP)</strong>, which couple forward manipulation behaviors with inverse recovery actions to form self-resetting loops for autonomous data collection. This mechanism enables continuous on-policy data acquisition and iterative policy refinement with minimal human intervention. During deployment, the same agent performs high-level reasoning and dynamically orchestrates learned policy primitives to accomplish long-horizon tasks.
               </p>
               <p>
-                During deployment, the same agent performs high-level reasoning and dynamically orchestrates learned skill primitives to accomplish long-horizon tasks. By maintaining consistent contextual semantics across collection and execution, RoboClaw reduces mismatch between the two phases and improves multi-skill robustness. Experiments in real-world manipulation tasks demonstrate improved stability and scalability compared to conventional open-loop pipelines, while significantly reducing human effort throughout the robot lifecycle.
+                By maintaining consistent contextual semantics across collection and execution, RoboClaw reduces mismatch between the two phases and improves multi-policy robustness. Experiments in real-world manipulation tasks demonstrate improved stability and scalability compared to conventional open-loop pipelines, while significantly reducing human effort throughout the robot lifecycle, achieving a 25% improvement in success rate over baseline methods on long-horizon tasks and reducing human time investment by 53.7%.
               </p>
             </div>
           </div>
@@ -348,7 +348,7 @@
           <div class="column is-full has-text-centered">
             <img src="static/屏幕截图 2026-03-09 100331.png" alt="Overview of RoboClaw" class="section-figure">
             <p class="figure-caption">
-              A VLM-based agent drives a closed-loop data engine: it schedules forward/inverse skills as Entangled Action Pairs (EAPs) for self-resetting data generation, manages multimodal context for reliable task progression, and performs automated cleaning and representation-space distribution checks. The curated trajectories are used to train independent skill checkpoints, which are then composed by the same agent at deployment time for long-horizon manipulation.
+              RoboClaw workflow across the robot policy lifecycle. A robot developer specifies system configuration, MCP tools, and skills, while RoboClaw provides file-based memory, memory embeddings, search, and management. Data is collected through basic human demonstrations followed by online rollout with EAP self resetting, producing a VLA policy pool that is continuously updated via streaming data. Activated policies are then used to execute complex long-horizon tasks under high-level plans and contextual guidance.
             </p>
           </div>
         </div>
