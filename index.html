@@ -7,7 +7,7 @@
   <meta name="title" content="RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks - AUTHOR_NAMES">
   <meta name="description" content="An agentic robotics framework that unifies data collection, skill learning, and task execution for long-horizon robotic manipulation.">
   <meta name="keywords" content="RoboClaw, robotics, VLA, VLM, long-horizon manipulation, embodied AI">
-  <meta name="author" content="Ruiying Li, Yunlang Zhou, YuYao Zhu, Kylin Chen, Sukai Wang, Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, yangyang, Guanghui Ren, Maoqing Yao, Wenhao Wang, Yao Mu">
+  <meta name="author" content="Ruiying Li, Yunlang Zhou, YuYao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang, Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, yangyang, Guanghui Ren, Maoqing Yao, Wenhao Wang, Yao Mu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
@@ -124,6 +124,55 @@
       border-radius: 10px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
+
+    .performance-row {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .performance-item {
+      width: 48%;
+      text-align: center;
+    }
+
+    .performance-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .performance-title {
+      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .video-embed-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-embed-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
   </style>
 
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -210,50 +259,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 1</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
     <section class="hero clean-hero">
       <div class="hero-body">
@@ -264,9 +269,9 @@
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  Ruiying Li, Yunlang Zhou, YuYao Zhu, Kylin Chen, Sukai Wang, Kongtao Hu,
-                  Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, yangyang,
-                  Guanghui Ren
+                  Ruiying Li, Yunlang Zhou, YuYao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang,
+                  Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen,
+                  yangyang, Guanghui Ren
                 </span>
                 <br>
                 <span class="author-block">
@@ -283,16 +288,6 @@
                         <i class="fas fa-file-pdf"></i>
                       </span>
                       <span>Paper</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
                     </a>
                   </span>
 
@@ -327,9 +322,13 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/WeChat_20260309150809.mp4" type="video/mp4">
-          </video>
+          <div class="video-embed-wrapper">
+            <iframe
+              src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV17DcBzdE44&p=1"
+              scrolling="no"
+              allowfullscreen="true">
+            </iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -436,27 +435,15 @@
 
     <section class="section">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Roboclaw Autonomous Data Collection Workflow</h2>
-        <div class="columns is-centered">
-          <div class="column is-full has-text-centered">
-            <img src="static/屏幕截图 2026-03-09 100527.png" alt="Roboclaw Autonomous Data Collection Workflow" class="section-figure">
-            <p class="figure-caption">
-              This diagram illustrates the process of the agent interacting with a user to initiate a data collection task for the robot ("place the primer into the drawer"). The agent autonomously processes visual observations using MCP tools, evaluates the initial state of the environment, and formulates a task plan. Subsequently, it continuously executes a forward-backward operational loop (i.e., placing the item into the drawer and then taking it out) while monitoring for anomalies in real-time during execution, thereby continuously acquiring the robotic manipulation dataset.
-            </p>
+        <h2 class="title is-3 has-text-centered">Performance demonstrated by dataset</h2>
+        <div class="performance-row">
+          <div class="performance-item">
+            <div class="performance-title">relative human time table</div>
+            <img src="static/images/屏幕截图 2026-03-10 165923.png" alt="relative human time table">
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Overview of the RoboClaw agentic framework</h2>
-        <div class="columns is-centered">
-          <div class="column is-full has-text-centered">
-            <img src="static/屏幕截图 2026-03-09 100719.png" alt="Overview of the RoboClaw agentic framework" class="section-figure">
-            <p class="figure-caption">
-              A Vision-Language Model (VLM) acts as a meta-controller operating under an in-context learning paradigm. Multimodal observations are integrated with structured memory (role identity, task-level memory, and working memory) to form the decision context. Through chain-of-thought (CoT) reasoning, the agent generates high-level decisions and invokes tools through a unified MCP execution interface. The same agent core governs both data collection and deployment, ensuring consistent control semantics across the full system lifecycle.
-            </p>
+          <div class="performance-item">
+            <div class="performance-title">compared success rates table</div>
+            <img src="static/images/微信图片_20260311114809.png" alt="compared success rates table">
           </div>
         </div>
       </div>
