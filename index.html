@@ -7,7 +7,7 @@
   <meta name="title" content="RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks - AUTHOR_NAMES">
   <meta name="description" content="An agentic robotics framework that unifies data collection, policy learning, and task execution for long-horizon robotic manipulation.">
   <meta name="keywords" content="RoboClaw, robotics, VLA, VLM, long-horizon manipulation, embodied AI">
-  <meta name="author" content="Ruiying Li, Yunlang Zhou, Yuyao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang, Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, yangyang, Guanghui Ren, Maoqing Yao, Wenhao Wang, Yao Mu">
+  <meta name="author" content="Ruiying Li, Yunlang Zhou, Yuyao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang, Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen, Yang Yang, Guanghui Ren, Maoqing Yao, Wenhao Wang, Yao Mu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
@@ -100,6 +100,14 @@
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .demo-video-title {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      color: #222;
     }
 
     .dataset-row {
@@ -249,7 +257,7 @@
                 <span class="author-block">
                   Ruiying Li, Yunlang Zhou, Yuyao Zhu, Kylin Chen, Jingyuan Wang, Sukai Wang,
                   Kongtao Hu, Minhui Yu, Bowen Jiang, Jiayao Ma, Zhan Su, XinHe, Yongjian Shen,
-                  yangyang, Guanghui Ren
+                  Yang Yang, Guanghui Ren
                 </span>
                 <br>
                 <span class="author-block">
@@ -351,6 +359,61 @@
 
     <section class="section">
       <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What can we do?</h2>
+        <div class="columns is-multiline is-variable is-6">
+          <div class="column is-half">
+            <h3 class="demo-video-title">Automatic Data Collection</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="/1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">What if the automatic data collection <strong>fails</strong>?</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="/2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">Execute long-horizon tasks</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">What if we want to execute the task <strong>remotely</strong>?</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">Long-horizon tasks with only dual arms</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/videos/111.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="column is-half">
+            <h3 class="demo-video-title">What if we want to expand the workspace?</h3>
+            <video class="demo-video" controls muted loop preload="metadata">
+              <source src="static/videos/112.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">The dataset we collect</h2>
         <div class="dataset-row">
           <img src="static/屏幕截图 2026-03-10 113809.png" alt="Collected dataset visualization 1">
@@ -414,4 +477,3 @@
 
 </body>
 </html>
-
