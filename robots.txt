@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roboclaw-agibot.github.io/sitemap.xml
